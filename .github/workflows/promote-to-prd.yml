@@ -17,5 +17,5 @@ jobs:
     - name: Heroku promote app
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku pipelines:promote -a <stg-app-name>
+      run: heroku pipelines:promote -a casey-devops-stg
 
