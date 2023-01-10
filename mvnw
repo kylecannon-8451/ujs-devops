@@ -19,11 +19,7 @@
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
-<<<<<<< Updated upstream
 # Maven Start Up Batch script
-=======
-# Apache Maven Wrapper startup batch script, version 3.1.1
->>>>>>> Stashed changes
 #
 # Required ENV vars:
 # ------------------
@@ -31,10 +27,7 @@
 #
 # Optional ENV vars
 # -----------------
-<<<<<<< Updated upstream
 #   M2_HOME - location of maven2's installed home dir
-=======
->>>>>>> Stashed changes
 #   MAVEN_OPTS - parameters passed to the Java VM when running Maven
 #     e.g. to debug Maven itself, use
 #       set MAVEN_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000
@@ -43,13 +36,6 @@
 
 if [ -z "$MAVEN_SKIP_RC" ] ; then
 
-<<<<<<< Updated upstream
-=======
-  if [ -f /usr/local/etc/mavenrc ] ; then
-    . /usr/local/etc/mavenrc
-  fi
-
->>>>>>> Stashed changes
   if [ -f /etc/mavenrc ] ; then
     . /etc/mavenrc
   fi
@@ -72,15 +58,9 @@ case "`uname`" in
     # See https://developer.apple.com/library/mac/qa/qa1170/_index.html
     if [ -z "$JAVA_HOME" ]; then
       if [ -x "/usr/libexec/java_home" ]; then
-<<<<<<< Updated upstream
         export JAVA_HOME="`/usr/libexec/java_home`"
       else
         export JAVA_HOME="/Library/Java/Home"
-=======
-        JAVA_HOME="`/usr/libexec/java_home`"; export JAVA_HOME
-      else
-        JAVA_HOME="/Library/Java/Home"; export JAVA_HOME
->>>>>>> Stashed changes
       fi
     fi
     ;;
@@ -92,7 +72,6 @@ if [ -z "$JAVA_HOME" ] ; then
   fi
 fi
 
-<<<<<<< Updated upstream
 if [ -z "$M2_HOME" ] ; then
   ## resolve links - $0 may be a link to maven's home
   PRG="$0"
@@ -123,10 +102,6 @@ fi
 if $cygwin ; then
   [ -n "$M2_HOME" ] &&
     M2_HOME=`cygpath --unix "$M2_HOME"`
-=======
-# For Cygwin, ensure paths are in UNIX format before anything is touched
-if $cygwin ; then
->>>>>>> Stashed changes
   [ -n "$JAVA_HOME" ] &&
     JAVA_HOME=`cygpath --unix "$JAVA_HOME"`
   [ -n "$CLASSPATH" ] &&
@@ -135,11 +110,8 @@ fi
 
 # For Mingw, ensure paths are in UNIX format before anything is touched
 if $mingw ; then
-<<<<<<< Updated upstream
   [ -n "$M2_HOME" ] &&
     M2_HOME="`(cd "$M2_HOME"; pwd)`"
-=======
->>>>>>> Stashed changes
   [ -n "$JAVA_HOME" ] &&
     JAVA_HOME="`(cd "$JAVA_HOME"; pwd)`"
 fi
@@ -173,11 +145,7 @@ if [ -z "$JAVACMD" ] ; then
       JAVACMD="$JAVA_HOME/bin/java"
     fi
   else
-<<<<<<< Updated upstream
     JAVACMD="`which java`"
-=======
-    JAVACMD="`\\unset -f command; \\command -v java`"
->>>>>>> Stashed changes
   fi
 fi
 
@@ -191,18 +159,12 @@ if [ -z "$JAVA_HOME" ] ; then
   echo "Warning: JAVA_HOME environment variable is not set."
 fi
 
-<<<<<<< Updated upstream
 CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
 
 # traverses directory structure from process work directory to filesystem root
 # first directory with .mvn subdirectory is considered project base directory
 find_maven_basedir() {
 
-=======
-# traverses directory structure from process work directory to filesystem root
-# first directory with .mvn subdirectory is considered project base directory
-find_maven_basedir() {
->>>>>>> Stashed changes
   if [ -z "$1" ]
   then
     echo "Path not specified to find_maven_basedir"
@@ -222,11 +184,7 @@ find_maven_basedir() {
     fi
     # end of workaround
   done
-<<<<<<< Updated upstream
   echo "${basedir}"
-=======
-  printf '%s' "$(cd "$basedir"; pwd)"
->>>>>>> Stashed changes
 }
 
 # concatenates all lines of a file
@@ -236,23 +194,11 @@ concat_lines() {
   fi
 }
 
-<<<<<<< Updated upstream
 BASE_DIR=`find_maven_basedir "$(pwd)"`
-=======
-BASE_DIR=$(find_maven_basedir "$(dirname $0)")
->>>>>>> Stashed changes
 if [ -z "$BASE_DIR" ]; then
   exit 1;
 fi
 
-<<<<<<< Updated upstream
-=======
-MAVEN_PROJECTBASEDIR=${MAVEN_BASEDIR:-"$BASE_DIR"}; export MAVEN_PROJECTBASEDIR
-if [ "$MVNW_VERBOSE" = true ]; then
-  echo $MAVEN_PROJECTBASEDIR
-fi
-
->>>>>>> Stashed changes
 ##########################################################################################
 # Extension to allow automatically downloading the maven-wrapper.jar from Maven-central
 # This allows using the maven wrapper in projects that prohibit checking in binary data.
@@ -266,7 +212,6 @@ else
       echo "Couldn't find .mvn/wrapper/maven-wrapper.jar, downloading it ..."
     fi
     if [ -n "$MVNW_REPOURL" ]; then
-<<<<<<< Updated upstream
       jarUrl="$MVNW_REPOURL/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar"
     else
       jarUrl="https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar"
@@ -277,18 +222,6 @@ else
     done < "$BASE_DIR/.mvn/wrapper/maven-wrapper.properties"
     if [ "$MVNW_VERBOSE" = true ]; then
       echo "Downloading from: $jarUrl"
-=======
-      wrapperUrl="$MVNW_REPOURL/org/apache/maven/wrapper/maven-wrapper/3.1.1/maven-wrapper-3.1.1.jar"
-    else
-      wrapperUrl="https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.1/maven-wrapper-3.1.1.jar"
-    fi
-    while IFS="=" read key value; do
-      case "$key" in (wrapperUrl) wrapperUrl="$value"; break ;;
-      esac
-    done < "$BASE_DIR/.mvn/wrapper/maven-wrapper.properties"
-    if [ "$MVNW_VERBOSE" = true ]; then
-      echo "Downloading from: $wrapperUrl"
->>>>>>> Stashed changes
     fi
     wrapperJarPath="$BASE_DIR/.mvn/wrapper/maven-wrapper.jar"
     if $cygwin; then
@@ -296,7 +229,6 @@ else
     fi
 
     if command -v wget > /dev/null; then
-<<<<<<< Updated upstream
         if [ "$MVNW_VERBOSE" = true ]; then
           echo "Found wget ... using wget"
         fi
@@ -315,36 +247,10 @@ else
             curl --user $MVNW_USERNAME:$MVNW_PASSWORD -o "$wrapperJarPath" "$jarUrl" -f
         fi
 
-=======
-        QUIET="--quiet"
-        if [ "$MVNW_VERBOSE" = true ]; then
-          echo "Found wget ... using wget"
-          QUIET=""
-        fi
-        if [ -z "$MVNW_USERNAME" ] || [ -z "$MVNW_PASSWORD" ]; then
-            wget $QUIET "$wrapperUrl" -O "$wrapperJarPath"
-        else
-            wget $QUIET --http-user="$MVNW_USERNAME" --http-password="$MVNW_PASSWORD" "$wrapperUrl" -O "$wrapperJarPath"
-        fi
-        [ $? -eq 0 ] || rm -f "$wrapperJarPath"
-    elif command -v curl > /dev/null; then
-        QUIET="--silent"
-        if [ "$MVNW_VERBOSE" = true ]; then
-          echo "Found curl ... using curl"
-          QUIET=""
-        fi
-        if [ -z "$MVNW_USERNAME" ] || [ -z "$MVNW_PASSWORD" ]; then
-            curl $QUIET -o "$wrapperJarPath" "$wrapperUrl" -f -L
-        else
-            curl $QUIET --user "$MVNW_USERNAME:$MVNW_PASSWORD" -o "$wrapperJarPath" "$wrapperUrl" -f -L
-        fi
-        [ $? -eq 0 ] || rm -f "$wrapperJarPath"
->>>>>>> Stashed changes
     else
         if [ "$MVNW_VERBOSE" = true ]; then
           echo "Falling back to using Java to download"
         fi
-<<<<<<< Updated upstream
         javaClass="$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.java"
         # For Cygwin, switch paths to Windows format before running javac
         if $cygwin; then
@@ -352,30 +258,13 @@ else
         fi
         if [ -e "$javaClass" ]; then
             if [ ! -e "$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.class" ]; then
-=======
-        javaSource="$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.java"
-        javaClass="$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.class"
-        # For Cygwin, switch paths to Windows format before running javac
-        if $cygwin; then
-          javaSource=`cygpath --path --windows "$javaSource"`
-          javaClass=`cygpath --path --windows "$javaClass"`
-        fi
-        if [ -e "$javaSource" ]; then
-            if [ ! -e "$javaClass" ]; then
->>>>>>> Stashed changes
                 if [ "$MVNW_VERBOSE" = true ]; then
                   echo " - Compiling MavenWrapperDownloader.java ..."
                 fi
                 # Compiling the Java class
-<<<<<<< Updated upstream
                 ("$JAVA_HOME/bin/javac" "$javaClass")
             fi
             if [ -e "$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.class" ]; then
-=======
-                ("$JAVA_HOME/bin/javac" "$javaSource")
-            fi
-            if [ -e "$javaClass" ]; then
->>>>>>> Stashed changes
                 # Running the downloader
                 if [ "$MVNW_VERBOSE" = true ]; then
                   echo " - Running MavenWrapperDownloader.java ..."
@@ -389,22 +278,16 @@ fi
 # End of extension
 ##########################################################################################
 
-<<<<<<< Updated upstream
 export MAVEN_PROJECTBASEDIR=${MAVEN_BASEDIR:-"$BASE_DIR"}
 if [ "$MVNW_VERBOSE" = true ]; then
   echo $MAVEN_PROJECTBASEDIR
 fi
-=======
->>>>>>> Stashed changes
 MAVEN_OPTS="$(concat_lines "$MAVEN_PROJECTBASEDIR/.mvn/jvm.config") $MAVEN_OPTS"
 
 # For Cygwin, switch paths to Windows format before running java
 if $cygwin; then
-<<<<<<< Updated upstream
   [ -n "$M2_HOME" ] &&
     M2_HOME=`cygpath --path --windows "$M2_HOME"`
-=======
->>>>>>> Stashed changes
   [ -n "$JAVA_HOME" ] &&
     JAVA_HOME=`cygpath --path --windows "$JAVA_HOME"`
   [ -n "$CLASSPATH" ] &&
@@ -422,12 +305,6 @@ WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
 exec "$JAVACMD" \
   $MAVEN_OPTS \
-<<<<<<< Updated upstream
   -classpath "$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar" \
   "-Dmaven.home=${M2_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
-=======
-  $MAVEN_DEBUG_OPTS \
-  -classpath "$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar" \
-  "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
->>>>>>> Stashed changes
   ${WRAPPER_LAUNCHER} $MAVEN_CONFIG "$@"
