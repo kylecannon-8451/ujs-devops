@@ -7,7 +7,7 @@ jobs:
     name: Build Docker Image
     uses: kylecannon-8451/wf_calls/.github/workflows/dockerbuild.yml@main
     with:
-      image_name: 'my_app'
+      image_name: "my_app"
 
  
   
